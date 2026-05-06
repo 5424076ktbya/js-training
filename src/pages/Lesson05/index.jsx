@@ -18,7 +18,7 @@ const convertData = (input) => {
   });
   for (const { y, gender } of input) { //データを1人ずつ入れる
     const i = Math.round(y) - min; //どの箱に入れるか計算
-    bins[i][gender] += 1; //カウントを増やす
+    bins[i][gender] += 1; //カウント（人数）を増やす
   }
   return bins;
 };
