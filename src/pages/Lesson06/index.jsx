@@ -4,11 +4,11 @@ import Chart from "../../components/Chart06";
 import instruction from "./instruction.md?raw";
 
 const convertData = (input) => {
-  const colors = {
+  const colors = {  //性別ごとに色を決めるための対応表を作成
     男性: "blue",
     女性: "red",
   };
-  return input.map(({ gender, x, y }) => {
+  return input.map(({ gender, x, y }) => {  //mapでデータを変換
     return {
       color: colors[gender],
       gender,
