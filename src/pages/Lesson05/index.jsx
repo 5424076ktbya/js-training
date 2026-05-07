@@ -5,11 +5,11 @@ import instruction from "./instruction.md?raw";
 
 const convertData = (input) => {
   const genders = Array.from(new Set(input.map(({ gender }) => gender))); //性別一覧を作る
-  const min = Math.round(Math.min(...input.map(({ y }) => y))); //最小値
-  const max = Math.round(Math.max(...input.map(({ y }) => y))); //最大値
+  const min = Math.round(Math.min(...input.map(({ y }) => y))); //最小値(四捨五入)
+  const max = Math.round(Math.max(...input.map(({ y }) => y))); //最大値(四捨五入
   const bins = Array.from({ length: max - min + 1 }).map((_, i) => { //空のビン（箱）を作る
     const obj = { //ビン1個の中身
-      bin: (min + i).toString(),
+      bin: (min + i).toString(),  //bin文字列だから文字列にする
     };
     for (const gender of genders) { //男女のカウントを0で初期化
       obj[gender] = 0;
