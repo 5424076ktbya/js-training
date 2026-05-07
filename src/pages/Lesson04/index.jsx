@@ -5,7 +5,7 @@ import instruction from "./instruction.md?raw";
 
 const convertData = (input) => {
   const species = Array.from(new Set(input.map(({species}) => species)));  //input.map(({ species }) => species)は各データから 品種名だけ取り出す、new Set(...)は重複を消す、Array.from(...)はSetは配列じゃないので、配列に戻す
-  return species.map((species) => {  //品種ごとに処理する
+  return species.map((species) => {  //品種ごとに処理する　　　　　　　　　　　　groupByで品種ごとにまとめた配列にする考え方もある　　
     return {
       id: species,  //出力形式の id に品種名を入れる
       data: input
