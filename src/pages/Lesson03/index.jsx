@@ -4,7 +4,7 @@ import Chart from "../../components/Chart03";
 import instruction from "./instruction.md?raw";
 
 const convertData = (input) => {
-  return input.filter((item) => item.gender === "男性");
+  return input.filter((item) => item.gender === "男性"); //nullかどうかのチェックは==、===は完全一致、基本はこっち
 };
 
 const Lesson = () => {
